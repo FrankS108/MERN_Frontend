@@ -1,0 +1,364 @@
+:root {
+    /*--fuentePrincipal: 'Poppins', sans-serif;*/
+    /*--fuentePrincipal: 'Outfit', sans-serif;*/
+    --fuentePrincipal: 'Roboto', sans-serif;
+    --black: black;
+    --white: white;
+    --background-left: linear-gradient(180deg, #21c8f6, #637bff);
+    --background-color: #ffffff;
+    --primary-color: #006ba6;
+    --secundary-color: #8f2d56;
+    --third-color: #0496ff;
+    --orange__color: #ffbc42;
+    --error: #D95C52;
+    --response: #52BD4D;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  font-family: var(--fuentePrincipal);
+  font-size: 1.6rem;
+  line-height: 1.8;
+  background-image: var(--background-color);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+h1, h2, h3 {
+  font-weight: 900;
+  margin: 2rem 0;
+}
+h1 {
+  font-size: 5rem;
+}
+h2 {
+  font-size: 4.6rem;
+}
+h3 {
+  font-size: 3rem;
+}
+
+.contenedor {  
+  max-width: 120rem;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.header__block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+@media (min-width: 768px) {
+    .header__block{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+.header__title{
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 4rem;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.navegation__block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+    .navegation__block{
+        flex-direction: row;
+    }
+}
+
+.navegation__link{
+    text-decoration: none;
+    color: var(--secundary-color);
+    padding: 1rem;
+    border-radius: 1.5rem;
+    cursor: pointer;
+}
+
+.users__block{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+}
+
+@media (min-width: 1280px) {
+    .users__block{
+        flex-direction: row;
+    }
+}
+
+.create__user__block{
+    padding: 3rem;
+    border-radius: 1rem;  
+    height: auto;
+    max-height: max-content;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.create__user__title{
+    padding: 1rem;
+    font-weight: 900;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    color: black;
+    text-align: center;
+}
+
+
+.create__user__block form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 0.5rem
+}
+
+.create__user__block form input[type = text]{
+    padding: 1rem;
+    width: 90%;
+}
+.create__user__block form input[type = submit]{
+    background-color: var(--third-color);
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 1rem;
+    width: 90%;
+}
+
+.users__created__block{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    height: min-content;
+    max-width: 100%;
+}
+
+@media (min-width: 1280px) {
+    .users__created__block{
+        justify-content: flex-start;
+    }
+}
+
+.user__block{
+    background-color: var(--secundary-color);
+    color: white;
+    text-transform: uppercase;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    min-width: 15rem;
+    text-align: center;
+}
+
+.task__created__block{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 3rem;
+    width: 90%;
+    padding: 2rem;
+}
+
+.task__block{
+    display: flex;
+    flex-direction: row;
+    max-width: 50rem;
+}
+
+.column__color{
+    height: auto;
+    width: 4rem;
+    background-color: var(--orange__color);
+}
+
+.task__information{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.task__user{
+    line-height: 0.1rem;
+    margin-bottom: 3rem;
+    color: gray;
+}
+
+.task__information p, h3, h4 {
+    margin: 0;
+}
+
+.task__date{
+    align-self: flex-end;
+    justify-self: flex-end;
+}
+
+.error__block{
+    background-color: var(--error);
+    border-radius: 1rem;
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.error__block p {
+    margin: 0;
+}
+
+.response__block{
+    background-color: var(--response);
+    border-radius: 1rem;
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.task__block__form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    padding: 2rem;
+}
+
+.form__block{
+    width: 60%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 2rem;
+}
+
+.task__form__title{
+    text-align: center;
+}
+
+.input__block{
+    display: flex;
+    flex-direction: column;
+}
+
+.input__block input[type = text]{
+    min-height: 3rem;
+    max-height: 3rem;
+}
+
+.input__block select{
+    min-height: 3rem;
+    max-height: 3rem;
+}
+
+.input__block input[type = date]{
+    min-height: 3rem;
+    max-height: 3rem;
+}
+
+.input__block textarea{
+    min-height: 20rem;
+    max-height: 20rem;
+    min-width: 100%;
+    max-width: 100%;
+    resize: none;
+}
+
+.buttons__block{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+}
+
+.buttons__block input[type =  submit], input[type = button]{
+    padding: 1rem;
+    min-width: 10rem;
+    max-width: 40rem;
+}
+
+.button__update{
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: var(--third-color);
+}
+
+.button__delete{
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: var(--error);
+}
+
+@media (min-width: 1280px) {
+    .buttons__block{
+        flex-direction: row;
+    }
+}
+
+.delete__confirmation__block{
+    background-color: white;
+    position: absolute;
+    padding: 2rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    min-width: 30rem;
+}
+
+.delete__confirmation__block p{
+    text-align: center;
+}
+
+.edit__form{
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+}
+
+.form__buttons{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 1280px) {
+    .form__buttons{
+        flex-direction: row;
+    }
+}
+
+.form__buttons input{
+    width: 100%;
+}

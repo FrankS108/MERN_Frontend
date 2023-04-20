@@ -5,7 +5,7 @@ export const DeleteConfirmation = ({id, setState, getNotes}) => {
 
   const confirm = async () => {
     setState(false);
-    await axios.delete(`http://localhost:4000/api/task/${id}`).then(response => console.log(response));
+    await axios.delete(`${import.meta.env.VITE_BACKEND_URL}/api/task/${id}`);
     getNotes();
   }
 

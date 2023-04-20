@@ -3,7 +3,7 @@ import axios from 'axios';
 export const CardUser = (props) => {
 
   const deleteUser = async() => {
-    await axios.delete('http://localhost:4000/api/users', props.user);
+    await axios.delete(`${import.meta.env.VITE_BACKEND_URL}/api/users`, props.user);
     props.getUsers();
   }
   return (

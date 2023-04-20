@@ -13,7 +13,7 @@ export const CreateNote = () => {
     const [response, setResponse] = useState('');
 
     async function getUsers(){
-        await axios.get(`http://localhost:4000/api/users`)
+        await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/users`)
         .then((response) => { 
             const usersResponse = response.data.map((element) => element);
             setUsers(usersResponse);
@@ -44,7 +44,7 @@ export const CreateNote = () => {
             }, 10000);
             return;
         }
-        await axios.post(`http://localhost:4000/api/task`, {
+        await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/task`, {
             title, description, name, date
         }).then(response => {
             setResponse("Creado Correctamente");

@@ -16,13 +16,13 @@ export const CreateUser = () => {
         setError('');
       }, 10000);
     }
-    const { data } = await axios.post('http://localhost:4000/api/users', {name});
+    const { data } = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/users`, {name});
     const updateUsers = [...users, data];
     setUsers(updateUsers);
   }
 
   const getUsers = () => {
-    axios.get('http://localhost:4000/api/users')
+    axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/users`) //VITE_BACKEND_URL
       .then((response) => { 
         let usersResponse = response.data.map(element => element);
         setUsers(usersResponse);

@@ -7,7 +7,7 @@ export const NoteList = () => {
   const [notes, setNotes] = useState([]);
 
   const getNotes = () => {
-    axios.get('http://localhost:4000/api/task')
+    axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/task`)
       .then((response) => { 
         const taskResponse = response.data.map(element => element);
         setNotes(taskResponse);

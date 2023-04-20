@@ -27,7 +27,7 @@ export const EditTask = () => {
 
     async function getNote(){
         const id = params.id;
-        await axios.get(`http://localhost:4000/api/task/${id}`)
+        await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/task/${id}`)
         .then((response) => { 
           const task = response.data;
           setTitle(task.title);
@@ -38,7 +38,7 @@ export const EditTask = () => {
     }
 
     async function getUsers(){
-        await axios.get(`http://localhost:4000/api/users`)
+        await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/users`)
         .then((response) => { 
             const usersResponse = response.data.map((element) => element);
             setUsers(usersResponse);
@@ -62,7 +62,7 @@ export const EditTask = () => {
     }
 
     const id = params.id;
-        await axios.put(`http://localhost:4000/api/task/${id}`, {
+        await axios.put(`${import.meta.env.VITE_BACKEND_URL}/api/task/${id}`, {
             title, description, name, date
         });
         navigate('/');

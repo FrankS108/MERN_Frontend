@@ -19,6 +19,7 @@ export const CreateUser = () => {
     const { data } = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/users`, {name});
     const updateUsers = [...users, data];
     setUsers(updateUsers);
+    setName('');
   }
 
   const getUsers = () => {
